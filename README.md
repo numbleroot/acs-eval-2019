@@ -29,7 +29,7 @@ Prototype zeno: [numbleroot/zeno](https://github.com/numbleroot/zeno).
 
 ### Comparison System 1: Mix-net Vuvuzela
 
-Mix-net [*Vuvuzela*](https://github.com/vuvuzela/vuvuzela) follows a conventional single-cascade
+Mix-net [Vuvuzela](https://github.com/vuvuzela/vuvuzela) follows a conventional single-cascade
 mix-net architecture. It was subsequently tightly integrated with metadata-private dialing
 system [Alpenhorn](https://github.com/vuvuzela/alpenhorn), which made evaluation of core-Vuvuzela
 difficult. Thus, we base our experiments of Vuvuzela on a fork of its source code as of late 2016
@@ -42,7 +42,7 @@ purposes: [numbleroot/vuvuzela](https://github.com/numbleroot/vuvuzela/tree/vani
 
 ### Comparison System 2: CPIR System Pung
 
-Computational Private Information Retrieval (CPIR) system [*Pung*](https://github.com/pung-project/pung)
+Computational Private Information Retrieval (CPIR) system [Pung](https://github.com/pung-project/pung)
 achieves its anonymity guarantees through the very different ACS foundation of PIR. Its basis on
 the computational variant of this technique enables zerotrust deployments, i.e., a single untrusted
 server that relays messages between clients via a highly optimized cryptographic protocol. Pung
@@ -75,6 +75,6 @@ users per ACS and failure scenario, respectively. The files can be parsed and ap
 
 Finally, we provide the full set of obtained measurements and collected log files for all failure
 scenarios and user bases each of the ACS has been evaluated under. **Please mind:** the total size
-of below repository is about 13GB, please only download if you genuinely need the data.
+of below repository is about 13GB, please only download it if you genuinely need the data.
 
-ACS 2019 evaluation measurements: [zeno-project/acs-eval-results](https://gitlab.tubit.tu-berlin.de/zeno-project/acs-eval-results).
+2019 ACS evaluation measurements: [zeno-project/acs-eval-results](https://gitlab.tubit.tu-berlin.de/zeno-project/acs-eval-results).
