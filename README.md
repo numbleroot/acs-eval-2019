@@ -21,8 +21,8 @@ ACS test bed: [numbleroot/acs-test-bed](https://github.com/numbleroot/acs-test-b
 
 We proposed a novel ACS based on the well-established mix-net architecture that is able to
 remain available despite a large number of Byzantine failures. We implemented most components
-of our proposal in prototype *zeno*, which is the first of three ACS we evaluate with the
-help of our ACS test bed.
+of our proposal in prototype zeno, which is the first of three ACS we evaluate with the help
+of our ACS test bed.
 
 Prototype zeno: [numbleroot/zeno](https://github.com/numbleroot/zeno).
 
