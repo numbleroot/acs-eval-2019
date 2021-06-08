@@ -1,8 +1,9 @@
-# Planet-Scale Public Cloud Evaluation of zeno, Vuvuzela, and Pung
+# Planet-Scale Public Cloud Evaluation of FTMix, Vuvuzela, and Pung
 
-This repository acts as the top-level list of pointers to all deployed Anonymous Communication
-System (ACS), used configurations, and obtained results from our 2019 evaluation of
-[zeno](https://github.com/numbleroot/zeno), [Vuvuzela](https://github.com/vuvuzela/vuvuzela),
+**[PUBLICATION FORTHCOMING]**
+
+This repository lists the Anonymous Communication Systems (ACS), used configurations, and
+obtained results from our 2019 evaluation of FTMix, [Vuvuzela](https://github.com/vuvuzela/vuvuzela),
 and [Pung](https://github.com/pung-project/pung).
 
 
@@ -17,26 +18,28 @@ and figures based on the collected data.
 ACS test bed: [numbleroot/acs-test-bed](https://github.com/numbleroot/acs-test-bed).
 
 
-### Prototype Fault-tolerant Mix-net zeno
+### Prototype Fault-tolerant Mixnet FTMix
 
-We proposed a novel ACS based on the well-established mix-net architecture that is able to
-remain available despite a large number of Byzantine failures. We implemented most components
-of our proposal in prototype zeno, which is the first of three ACS we evaluate with the help
-of our ACS test bed.
+We integrated straightforward fault tolerance measures into a cascade-based, pool-style mixnet,
+enabling it to remain available despite a large number of Byzantine failures.
 
-Prototype zeno: [numbleroot/zeno](https://github.com/numbleroot/zeno).
+**Mind:** At the time of our experiments, our prototype fault-tolerant mixnet was still called
+*zeno*. We renamed it to *FTMix* (**f**ault-**t**olerant **mix**net) afterwards to make its
+purpose immediately clear through its name. In order not to create inconsistencies in the data
+sets, however, we have not replaced 'zeno' with 'FTMix' in any of the GCP configuration files
+or result logs. Please keep that in mind when you look at these files.
 
 
-### Comparison System 1: Mix-net Vuvuzela
+### Comparison System 1: Mixnet Vuvuzela
 
-Mix-net [Vuvuzela](https://github.com/vuvuzela/vuvuzela) follows a conventional single-cascade
-mix-net architecture. It was subsequently tightly integrated with metadata-private dialing
+Mixnet [Vuvuzela](https://github.com/vuvuzela/vuvuzela) follows a conventional single-cascade
+mixnet architecture. It was subsequently tightly integrated with metadata-private dialing
 system [Alpenhorn](https://github.com/vuvuzela/alpenhorn), which made evaluation of core-Vuvuzela
 difficult. Thus, we base our experiments of Vuvuzela on a fork of its source code as of late 2016
 (right before integration of Alpenhorn) and with slight modifications that enabled scriptability
 needed for such large-scale evaluation.
 
-Fork of mix-net Vuvuzela on branch `vanilla-vuvuzela` with minor adjustments for evaluation
+Fork of mixnet Vuvuzela on branch `vanilla-vuvuzela` with minor adjustments for evaluation
 purposes: [numbleroot/vuvuzela](https://github.com/numbleroot/vuvuzela/tree/vanilla-vuvuzela).
 
 
@@ -46,7 +49,7 @@ Computational Private Information Retrieval (CPIR) system [Pung](https://github.
 achieves its anonymity guarantees through the very different ACS foundation of PIR. Its basis on
 the computational variant of this technique enables zerotrust deployments, i.e., a single untrusted
 server that relays messages between clients via a highly optimized cryptographic protocol. Pung
-also allows for anonymous group conversations and asynchronous retrievals, which neither zeno nor
+also allows for anonymous group conversations and asynchronous retrievals, which neither FTMix nor
 Vuvuzela provide. Again, we deployed a minimally adjusted fork of the Pung source code that integrates
 into our ACS test bed.
 
@@ -77,4 +80,4 @@ Finally, we provide the full set of obtained measurements and collected log file
 scenarios and user bases each of the ACS has been evaluated under. **Please mind:** the total size
 of below repository is about 13GB, please only download it if you genuinely need the data.
 
-2019 ACS evaluation measurements: [zeno-project/acs-eval-results](https://gitlab.tubit.tu-berlin.de/zeno-project/acs-eval-results).
+2019 ACS evaluation measurements: [acs-eval-results](https://gitlab.tubit.tu-berlin.de/zeno-project/acs-eval-results).
