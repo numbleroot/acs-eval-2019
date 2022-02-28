@@ -1,10 +1,11 @@
 # Planet-Scale Public Cloud Evaluation of FTMix, Vuvuzela, and Pung
 
-**[PUBLICATION FORTHCOMING]**
+Related publication: ["Strong Anonymity is not Enough: Introducing Fault Tolerance to Planet-Scale Anonymous Communication Systems"](https://dl.acm.org/doi/10.1145/3465481.3469189).
 
 This repository lists the Anonymous Communication Systems (ACS), used configurations, and
-obtained results from our 2019 evaluation of FTMix, [Vuvuzela](https://github.com/vuvuzela/vuvuzela),
-and [Pung](https://github.com/pung-project/pung).
+obtained results from our 2019 evaluation of [FTMix](https://github.com/numbleroot/zeno)
+(formerly *zeno*), [Vuvuzela](https://github.com/vuvuzela/vuvuzela), and
+[Pung](https://github.com/pung-project/pung).
 
 
 ### Data Collection on Planet-Scale Public Cloud ACS Test Bed
@@ -20,14 +21,16 @@ ACS test bed: [numbleroot/acs-test-bed](https://github.com/numbleroot/acs-test-b
 
 ### Prototype Fault-tolerant Mixnet FTMix
 
-We integrated straightforward fault tolerance measures into a cascade-based, pool-style mixnet,
-enabling it to remain available despite a large number of Byzantine failures.
+We integrated straightforward fault tolerance measures into a cascade-based, pool-style mixnet
+called [FTMix](https://github.com/numbleroot/zeno), enabling it to remain available despite a
+large number of Byzantine failures.
 
-**Mind:** At the time of our experiments, our prototype fault-tolerant mixnet was still called
-*zeno*. We renamed it to *FTMix* (**f**ault-**t**olerant **mix**net) afterwards to make its
-purpose immediately clear through its name. In order not to create inconsistencies in the data
-sets, however, we have not replaced 'zeno' with 'FTMix' in any of the GCP configuration files
-or result logs. Please keep that in mind when you look at these files.
+**Mind:** At the time of our experiments, [our proof-of-concept fault-tolerant mixnet was still
+called *zeno*](https://github.com/numbleroot/zeno#note-on-name-and-scope-of-repository). We renamed
+it to *FTMix* (**f**ault-**t**olerant **mix**net) due to scope change and to make its purpose
+immediately clear through its name. In order not to create inconsistencies in the data sets,
+however, we have not replaced 'zeno' with 'FTMix' in any of the GCP configuration files or result
+logs. Please keep that in mind when you look at these files.
 
 
 ### Comparison System 1: Mixnet Vuvuzela
@@ -76,8 +79,8 @@ users per ACS and failure scenario, respectively. The files can be parsed and ap
 
 ### Results
 
-Finally, we provide the full set of obtained measurements and collected log files for all failure
-scenarios and user bases each of the ACS has been evaluated under. **Please mind:** the total size
-of below repository is about 13GB, please only download it if you genuinely need the data.
+We provide the full set of obtained measurements and collected log files for all failure scenarios
+and user bases each of the ACS has been evaluated under as an `xz`-compressed archive. After having
+downloaded it, unpack and decompress it using `tar` with `xz`.
 
-2019 ACS evaluation measurements: [acs-eval-results](https://gitlab.tubit.tu-berlin.de/zeno-project/acs-eval-results).
+2019 ACS evaluation measurements (size: 463 MB): [https://osf.io/nfzy5](https://osf.io/nfzy5/).
